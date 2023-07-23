@@ -93,15 +93,34 @@ display: none;
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__nav--mobile {
 display: flex;
 }
-#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navBtn {
-position: absolute;
-right: 2%;
-top: 5%;
-height: 30px;
-width: 35px;
-background: transparent;
-border: none;
-cursor: pointer;
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--top {
+transform: translate(0, -8px);
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--middle {
+transform: translate(0, 0px);
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--bottom {
+transform: translate(0, 8px);
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--left {
+transform: translate(0, 0) rotate(45deg);
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--right {
+transform: translate(0, 0) rotate(-45deg);
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-kv-menu-toggle {
+display: none;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-kv__hidden {
+visibility: collapse;
+height: 0px;
+opacity: 0;
+transition: all 0.2s ease-out;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-kv-menu-toggle:checked ~ #es-kv__hidden {
+visibility: visible;
+height: auto;
+opacity: 1;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStrokeCtn {
 width: 50px;
@@ -111,6 +130,28 @@ flex-direction: column;
 justify-content: space-between;
 align-items: center;
 transition: all 0.3s ease;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-kv__navBtn {
+position: absolute;
+right: 2%;
+top: 5%;
+height: 30px;
+width: 35px;
+background: transparent;
+border: none;
+cursor: pointer;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStrokeCtn--2 {
+position: absolute;
+display: block;
+width: 40px;
+height: 40px;
+top: 5px;
+right: 5px;
+cursor: pointer;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-kv-menu-toggle:checked ~ #es-kv__navBtn {
+display: none;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke {
 display: block;
@@ -124,19 +165,11 @@ border-radius: 4px;
 background-color: #001883;
 transition: all 0.3s ease;
 }
-#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--top {
-transform: translate(0, -8px);
-}
-#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--middle {
-transform: translate(0, 0px);
-}
-#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--bottom {
-transform: translate(0, 8px);
-}
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navCtn {
 display: flex;
 flex-direction: column;
 padding: 0;
+margin: 0;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navItem {
 min-width: 160px;
@@ -196,7 +229,7 @@ font-size: 28px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__subtitleCtn {
 position: absolute;
-bottom: 32px;
+bottom: -50px;
 left: 0;
 background-image: url(https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-kv-text-bg.webp);
 background-repeat: no-repeat;
@@ -236,7 +269,7 @@ content: url(https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img
 display: block;
 scale: 0.6;
 position: absolute;
-right: -20px;
+right: -30px;
 bottom: -70px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStrokeCross--top {
@@ -247,6 +280,12 @@ opacity: 0;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStrokeCross--bottom {
 transform: translate(0, 0) rotate(-45deg);
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv--desktop {
+display: none;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv--mobile {
+display: block;
 }
 @media (min-width: 440px) {
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__subtitleCtn {
@@ -261,6 +300,9 @@ transform: translate(0, 0) rotate(-45deg);
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__title {
   font-size: 32px;
   padding-left: 25px;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__subtitleCtn {
+bottom: -10px;
 }
 }
 @media (min-width: 650px) {
@@ -279,7 +321,7 @@ transform: translate(0, 0) rotate(-45deg);
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__nav--mobile {
   display: none;
 }
-#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navBtn {
+#es-sanofi.es-sanofi #es-magne.es-magne #es-kv__navBtn {
   display: none;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navCtn {
@@ -324,7 +366,7 @@ transform: translate(0, 0) rotate(-45deg);
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__text {
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__text:after {
   display: block;
@@ -341,6 +383,7 @@ transform: translate(0, 0) rotate(-45deg);
   position: relative;
   top: -60px;
   padding-left: 0;
+  min-width: 280px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__subtitleCtn {
   position: relative;
@@ -375,6 +418,12 @@ transform: translate(0, 0) rotate(-45deg);
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__img {
   max-width: unset;
 }
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv--desktop {
+display: block;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-kv--mobile {
+display: none;
+}
 }
 @media (min-width: 1200px) {
 #es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navItem {
@@ -384,7 +433,7 @@ transform: translate(0, 0) rotate(-45deg);
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-cross {
 padding: 20px;
-margin-top: 20px;
+margin-top: 40px;
 display: flex;
 flex-direction: column;
 flex-wrap: nowrap;
@@ -459,6 +508,16 @@ justify-content: center;
 gap: 40px;
 }
 }
+#es-sanofi.es-sanofi #es-magne.es-magne #jak-zadbac {
+position: absolute;
+top: -40px;
+font-size: 0;
+}
+@media (min-width: 900px) {
+#es-sanofi.es-sanofi #es-magne.es-magne #jak-zadbac {
+top: -190px;
+}
+}
 #es-sanofi.es-sanofi #es-magne.es-magne .es-care {
 width: 100%;
 padding: 14px;
@@ -467,6 +526,7 @@ background-repeat: no-repeat;
 background-position: top;
 padding-top: 80px;
 min-height: 1233px;
+position: relative;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-care__title {
 font-size: 16px;
@@ -498,13 +558,13 @@ width: 100%;
 #es-sanofi.es-sanofi #es-magne.es-magne .es-care__imgCtn {
 position: absolute;
 right: -14px;
-bottom: 35px;
+bottom: 50px;
 width: 60%;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-care__list {
 display: flex;
 flex-direction: column;
-margin-bottom: 160px;
+margin-bottom: 125px;
 gap: 24px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-care__number {
@@ -653,6 +713,16 @@ background-repeat: no-repeat;
 background-position: right top;
 background-size: 55%;
 }
+#es-sanofi.es-sanofi #es-magne.es-magne #jak-wybrac {
+position: absolute;
+top: -115px;
+font-size: 0;
+}
+@media (min-width: 900px) {
+#es-sanofi.es-sanofi #es-magne.es-magne #jak-wybrac {
+top: -200px;
+}
+}
 #es-sanofi.es-sanofi #es-magne.es-magne .es-why {
 position: relative;
 z-index: 0;
@@ -682,6 +752,7 @@ color: #001883;
 font-size: 28px;
 padding: 14px;
 margin-bottom: 25px;
+position: relative;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-why__textCtn {
 font-size: 16px;
@@ -698,7 +769,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-@media (min-width: 400px) {
+@media (min-width: 425px) {
 #es-sanofi.es-sanofi #es-magne.es-magne .es-why__textCtn {
   width: 345px;
 }
@@ -835,11 +906,20 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 14px;
 margin-bottom: 25px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__content {
 width: 100%;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #jak-uspokoic {
+position: absolute;
+top: -125px;
+font-size: 0;
+}
+@media (min-width: 900px) {
+#es-sanofi.es-sanofi #es-magne.es-magne #jak-uspokoic {
+top: -200px;
+}
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__title {
 font-size: 16px;
@@ -849,6 +929,7 @@ color: #001883;
 font-size: 30px;
 position: relative;
 margin-bottom: 25px;
+position: relative;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__title::after {
 content: url(https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-heart.webp);
@@ -888,12 +969,15 @@ z-index: 5;
 min-height: 250px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__info {
-font-size: 14px;
+font-size: 12px;
 line-height: 1.2;
 max-width: 500px;
 font-family: "es-Gilroy-Regular";
 color: #001883;
 position: relative;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-how__info--1 {
+padding-left: 25px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__info--2 {
 padding-left: 100px;
@@ -904,15 +988,15 @@ position: relative;
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__icon {
 position: absolute;
 top: 0;
-width: 60px;
-height: 60px;
-animation: es-pulse 2s infinite;
+width: 55px;
+height: 55px;
+/* animation: es-pulse 2s infinite; */
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__icon--1 {
-left: -65px;
+left: -33px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__icon--2 {
-left: 30px;
+left: 38px;
 }
 @media (min-width: 480px) {
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__infoCtn {
@@ -947,14 +1031,6 @@ left: 30px;
   align-items: center;
   position: relative;
 }
-/* #es-sanofi.es-sanofi #es-magne.es-magne .es-how::after {
-  content: url(https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-how-happyFace.webp);
-  display: block;
-  position: absolute;
-  right: 10%;
-  bottom: -10%;
-  transform: scale(1);
-} */
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__content {
   width: 100%;
   margin: auto;
@@ -981,14 +1057,6 @@ left: 30px;
   margin-top: unset;
   position: relative;
 }
-/* #es-sanofi.es-sanofi #es-magne.es-magne .es-how__imgCtn::before {
-  content: url(https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-how-sadFace.webp);
-  display: block;
-  position: absolute;
-  top: -15%;
-  left: -7%;
-  transform: scale(1);
-} */
 #es-sanofi.es-sanofi #es-magne.es-magne .es-how__list {
   max-width: unset;
 }
@@ -1002,11 +1070,18 @@ left: 30px;
 #es-sanofi.es-sanofi #es-magne.es-magne .es-container--2 {
 background-image: url(https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-body-mobile.webp);
 background-repeat: no-repeat;
-background-position: top left;
+background-position: top 0% left 10%;
 min-height: 1025px;
 }
-#es-sanofi.es-sanofi #es-magne.es-magne .es-symptoms {
-padding: 14px;
+#es-sanofi.es-sanofi #es-magne.es-magne #mozliwe-objawy {
+position: absolute;
+top: -120px;
+font-size: 0;
+}
+@media (min-width: 900px) {
+#es-sanofi.es-sanofi #es-magne.es-magne #mozliwe-objawy {
+top: -200px;
+}
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-symptoms__title {
 font-size: 28px;
@@ -1015,6 +1090,8 @@ font-family: "es-Bliss-Heavy";
 color: #001883;
 max-width: 400px;
 margin-bottom: 25px;
+padding-inline: 8px;
+position: relative;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-symptoms__subtitle {
 font-size: 18px;
@@ -1024,6 +1101,7 @@ font-family: "es-Gilroy-semibold";
 text-align: left;
 max-width: 390px;  
 margin-bottom: 25px;
+padding-inline: 8px;
 }
 
 #es-sanofi.es-sanofi #es-magne.es-magne .es-symptoms__content {
@@ -1047,12 +1125,12 @@ line-height: 1.2;
 text-align: left;
 font-family: "es-Gilroy-semibold";
 color: #001883;
-font-size: 16px;
+font-size: 14px;
 margin: 30px 0;
 }
-@media (min-width: 380px) {
+@media (min-width: 375px) {
 #es-sanofi.es-sanofi #es-magne.es-magne .es-symptoms__contentCtn {
-  padding-top: 80px;
+  padding-top: 90px;
 }
 }
 @media (min-width: 650px) {
@@ -1132,16 +1210,17 @@ padding-bottom: 25px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-know__title::before {
 content: url(https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-question-mark.webp);
-position: absolute;
-top: -45px;
-left: -10px;
 display: block;
-transform: scale(0.7);
+position: absolute;
+top: -90px;
+left: -10px;
+transform: scale(0.6);
 animation: es-pulse 2s infinite;
 }
 @media (min-width: 450px) {
 #es-sanofi.es-sanofi #es-magne.es-magne .es-know__title::before {
-  left: 30px;
+  left: 6%;
+  top: -65px;
 }
 }
 @media (min-width: 900px) {
@@ -1186,21 +1265,23 @@ margin-top: -170px;
 #es-sanofi.es-sanofi #es-magne.es-magne .es-activeInfo__ctn {
 background-color: #001883;
 color: #fff;
-border-radius: 99px;
+border-radius: 77px;
 padding: 6px;
-width: 90%;
+width: 97%;
 margin: 0 auto;
 padding: 20px;
 position: relative;
 margin-bottom: 25px;
 }
-#es-sanofi.es-sanofi #es-magne.es-magne .es-activeInfo__ctn::after {
+@media (min-width: 450px) {
+  #es-sanofi.es-sanofi #es-magne.es-magne .es-activeInfo__ctn::after {
 content: url(https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-active-line-top.webp);
 display: block;
 position: absolute;
 top: -60%;
 right: -50px;
 transform: scale(0.6);
+}
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-activeInfo__title {
 font-size: 28px;
@@ -1212,7 +1293,7 @@ margin-left: 5%;
 margin-bottom: 25px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-activeInfo__subtitle {
-font-size: 20px;
+font-size: 18px;
 line-height: 1.2;
 text-align: center;
 font-family: "es-Gilroy-semibold";
@@ -1324,6 +1405,17 @@ padding: 0;
 #es-sanofi.es-sanofi #es-magne.es-magne .es-exercise {
 padding: 14px;
 margin-bottom: 16px;
+position: relative;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #cwiczenia {
+position: absolute;
+top: -120px;
+font-size: 0;
+}
+@media (min-width: 900px) {
+#es-sanofi.es-sanofi #es-magne.es-magne #cwiczenia {
+top: -190px;
+}
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-exercise__title {
 font-size: 16px;
@@ -1419,6 +1511,16 @@ justify-content: flex-start;
 #es-sanofi.es-sanofi #es-magne.es-magne .es-faq {
 padding: 14px;
 }
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq {
+position: absolute;
+top: -130px;
+font-size: 0;
+}
+@media (min-width: 900px) {
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq {
+top: -210px;
+}
+}
 #es-sanofi.es-sanofi #es-magne.es-magne .es-faq__title {
 line-height: 1.2;
 margin-top: 10px;
@@ -1427,25 +1529,28 @@ color: #001883;
 font-size: 28px;
 text-align: left;
 margin-bottom: 18px;
+position: relative;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-faq__item {
 cursor: pointer;
 margin: 10px;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-faq__question {
-font-size: 16px;
-line-height: 1.2;
-margin-top: 10px;
-font-family: "es-Gilroy-semibold";
 display: flex;
 justify-content: space-between;
 align-items: center;
 text-align: left;
 width: 100%;
 background: #001883;
-color: #fff;
 padding: 10px 20px;
 border-radius: 30px;
+cursor: pointer;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-faq__txt {
+font-size: 16px;
+line-height: 1.2;
+font-family: "es-Gilroy-semibold";
+color: #fff;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-faq__rotate {
 transform: rotate(-180deg);
@@ -1468,6 +1573,7 @@ color: #001883;
 }
 @media (min-width: 650px) {
 #es-sanofi.es-sanofi #es-magne.es-magne .es-faq__title {
+  margin-top: 25px;
   font-size: 42px;
   text-align: center;
 }
@@ -1638,55 +1744,138 @@ margin-top: 15px;
 #es-sanofi.es-sanofi #es-magne.es-magne .es-hide {
 display: none;
 }
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-1 {
+display: none;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq__answer-1 {
+visibility: collapse;
+height: 0px;
+opacity: 0;
+transition: all 0.2s ease-out;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-1:checked ~ #es-faq__answer-1 {
+visibility: visible;
+height: auto;
+opacity: 1;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-2 {
+display: none;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq__answer-2 {
+visibility: collapse;
+height: 0px;
+opacity: 0;
+transition: all 0.2s ease-out;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-2:checked ~ #es-faq__answer-2 {
+visibility: visible;
+height: auto;
+opacity: 1;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-3 {
+display: none;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq__answer-3 {
+visibility: collapse;
+height: 0px;
+opacity: 0;
+transition: all 0.2s ease-out;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-3:checked ~ #es-faq__answer-3 {
+visibility: visible;
+height: auto;
+opacity: 1;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-4 {
+display: none;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq__answer-4 {
+visibility: collapse;
+height: 0px;
+opacity: 0;
+transition: all 0.2s ease-out;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-4:checked ~ #es-faq__answer-4 {
+visibility: visible;
+height: auto;
+opacity: 1;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-5 {
+display: none;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq__answer-5 {
+visibility: collapse;
+height: 0px;
+opacity: 0;
+transition: all 0.2s ease-out;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne #es-faq-toggle-5:checked ~ #es-faq__answer-5 {
+visibility: visible;
+height: auto;
+opacity: 1;
+}
+#es-sanofi.es-sanofi #es-magne.es-magne .es-faq__single {
+display: block;
+width: 100%;
+}
 </style>
 <div class="es-sanofi" id="es-sanofi">
   <div class="es-magne" id="es-magne">
     <div class="es-kv">
-      <nav class="es-kv__nav es-kv__nav--mobile">
-        <button type="button" class="es-kv__navBtn">
+      <div class="es-kv__nav es-kv__nav--mobile">
+        <input type="checkbox" id="es-kv-menu-toggle" />
+        <label for="es-kv-menu-toggle" id="es-kv__navBtn">
           <div class="es-kv__navStrokeCtn">
             <span class="es-kv__navStroke es-kv__navStroke--top"></span>
             <span class="es-kv__navStroke es-kv__navStroke--middle"></span>
             <span class="es-kv__navStroke es-kv__navStroke--bottom"></span>
           </div>
-        </button>
-        <ul class="es-kv__navCtn es-hide">
-          <a href="#jak-zadbac" class="es-kv__navLink">
-            <li class="es-kv__navItem">
-              Jak zadbać <br />
-              o&nbsp;dobrostan psychiczny?
-            </li>
-          </a>
-          <a href="#jak-wybrac" class="es-kv__navLink">
-            <li class="es-kv__navItem">
-              Jak wybrać <br />
-              i&nbsp;przyjmować mazgnez?
-            </li>
-          </a>
-          <a href="#jak-uspokoic" class="es-kv__navLink">
-            <li class="es-kv__navItem">
-              Jak uspokoić<br />
-              nerwy?
-            </li>
-          </a>
-          <a href="#mozliwe-objawy" class="es-kv__navLink">
-            <li class="es-kv__navItem">
-              Możliwe objawy <br />
-              niedoboru magnezu
-            </li>
-          </a>
-          <a href="#cwiczenia" class="es-kv__navLink">
-            <li class="es-kv__navItem">
-              Ćwiczenia <br />
-              relaksacyjne
-            </li>
-          </a>
-          <a href="#faq" class="es-kv__navLink">
-            <li class="es-kv__navItem">FAQ</li>
-          </a>
-        </ul>
-      </nav>
-      <nav class="es-kv__nav es-kv__nav--desktop">
+        </label>
+        <div id="es-kv__hidden">
+          <ul class="es-kv__navCtn">
+            <a href="#jak-zadbac" class="es-kv__navLink">
+              <li class="es-kv__navItem">
+                Jak zadbać <br />
+                o&nbsp;dobrostan psychiczny?
+              </li>
+            </a>
+            <a href="#jak-wybrac" class="es-kv__navLink">
+              <li class="es-kv__navItem">
+                Jak wybrać <br />
+                i&nbsp;przyjmować mazgnez?
+              </li>
+            </a>
+            <a href="#jak-uspokoic" class="es-kv__navLink">
+              <li class="es-kv__navItem">
+                Jak uspokoić<br />
+                nerwy?
+              </li>
+            </a>
+            <a href="#mozliwe-objawy" class="es-kv__navLink">
+              <li class="es-kv__navItem">
+                Możliwe objawy <br />
+                niedoboru magnezu
+              </li>
+            </a>
+            <a href="#cwiczenia" class="es-kv__navLink">
+              <li class="es-kv__navItem">
+                Ćwiczenia <br />
+                relaksacyjne
+              </li>
+            </a>
+            <a href="#es-faq" class="es-kv__navLink">
+              <li class="es-kv__navItem">FAQ</li>
+            </a>
+          </ul>
+          <label for="es-kv-menu-toggle" id="es-kv__navBtn--2">
+            <div class="es-kv__navStrokeCtn es-kv__navStrokeCtn--2">
+              <span class="es-kv__navStroke es-kv__navStroke--left"></span>
+              <span class="es-kv__navStroke es-kv__navStroke--right"></span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="es-kv__nav es-kv__nav--desktop">
         <ul class="es-kv__navCtn">
           <a href="#jak-zadbac" class="es-kv__navLink">
             <li class="es-kv__navItem">
@@ -1718,11 +1907,11 @@ display: none;
               relaksacyjne
             </li>
           </a>
-          <a href="#faq" class="es-kv__navLink">
+          <a href="#es-faq" class="es-kv__navLink">
             <li class="es-kv__navItem">FAQ</li>
           </a>
         </ul>
-      </nav>
+      </div>
       <div class="es-kv__content">
         <div class="es-kv__text">
           <div class="es-kv__title">
@@ -1736,10 +1925,12 @@ display: none;
           </div>
         </div>
         <div class="es-kv__imgCtn">
-          <picture>
-            <source media="(max-width:900px)" srcset="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-kv-header-mobile.webp">
+          <div class="es-kv--desktop">
             <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-kv-header.webp" alt="Zadbaj o swój dobrostan psychiczny: lek OTC Magne B6 Forte jest dostępny bez recepty w aptece internetowej Olmed." class="es-kv__img" />
-          </picture>
+          </div>
+          <div class="es-kv--mobile">
+            <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-kv-header-mobile.webp" alt="Zadbaj o swój dobrostan psychiczny: lek OTC Magne B6 Forte jest dostępny bez recepty w aptece internetowej Olmed." class="es-kv__img" />
+          </div>
         </div>
       </div>
     </div>
@@ -1787,11 +1978,12 @@ display: none;
       </div>
     </div>
 
-    <div class="es-container" id="jak-uspokoic">
+    <div class="es-container">
       <div class="es-how" >
         <div class="es-how__content">
           <div class="es-how__left">
             <div class="es-how__title">
+              <div id="jak-uspokoic">.</div>
               Jak ukoić nerwy <br />
               i&nbsp;regenerować siły <br /> podczas urlopu?
             </div>
@@ -1820,9 +2012,10 @@ display: none;
           </div>
         </div>
       </div>
-      <div class="es-container--2" id="mozliwe-objawy">
+      <div class="es-container--2">
         <div class="es-symptoms">
           <div class="es-symptoms__title">
+            <div id="mozliwe-objawy">.</div>
             Poznaj możliwe objawy<sup>2</sup> niedoboru magnezu, aby lepiej radzić sobie ze stresem
           </div>
           <div class="es-symptoms__subtitle">
@@ -1906,7 +2099,10 @@ display: none;
             </div>
           </div>
         </div>
-        <div class="es-why__title"  id="jak-wybrac">Jak wybrać i&nbsp;prawidłowo przyjmować magnez?</div>
+        <div class="es-why__title">
+          <div id="jak-wybrac">.</div>
+          Jak wybrać i&nbsp;prawidłowo przyjmować magnez?
+          </div>
         <div class="es-why__wrapper">
           <div class="es-why__single">
             <div class="es-why__numberCtn">
@@ -1953,8 +2149,9 @@ display: none;
       </div>
     </div>
 
-    <div class="es-care" id="jak-zadbac">
+    <div class="es-care">
       <div class="es-care__title">
+        <div id="jak-zadbac">.</div>
         Zastanawiasz się, jak zadbać o&nbsp;swój dobrostan psychiczny? 
       </div>
       <div class="es-care__desc">
@@ -1999,9 +2196,7 @@ display: none;
       <div class="es-activeInfo__title">
         Poznaj propozycje ćwiczeń relaksacyjnych, które pozwolą obniżyć stres i&nbsp;napięcie<sup>6,7</sup>
       </div>
-      <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-active-bg.webp"
-        alt="Jaka jest zalecana dzienna dawka magnezu dla dorosłych? 3-4 tabletki na dobę, w 2 lub 3 dawkach podzielonych podczas posiłku."
-        class="es-activeInfo__img" />
+      <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-active-bg.webp" alt="Jaka jest zalecana dzienna dawka magnezu dla dorosłych? 3-4 tabletki na dobę, w 2 lub 3 dawkach podzielonych podczas posiłku." class="es-activeInfo__img" />
       <div class="es-activeInfo__mainCtn">
         <div class="es-activeInfo__ctn">
           <div class="es-activeInfo__subtitle">Postaw na aktywność fizyczną!</div>
@@ -2030,7 +2225,8 @@ display: none;
       </div>
     </div>
 
-    <div class="es-exercise" id="cwiczenia">
+    <div class="es-exercise">
+      <div id="cwiczenia">.</div>
       <div class="es-exercise__content">
         <div class="es-exercise__single">
           <div class="es-exercise__wrapper">
@@ -2121,15 +2317,21 @@ display: none;
       </div>
     </div>
 
-    <div class="es-faq" id="faq">
-      <div class="es-faq__title">FAQ</div>
+    <div class="es-faq">
+      <div class="es-faq__title">
+        <div id="es-faq">.</div>
+        FAQ
+      </div>
 
-      <details class="es-faq__item">
-        <summary class="es-faq__question" data-esquestion-id="es-question-1">
-          Jakie są przyczyny niedoboru magnezu? 
-          <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-1" />
-        </summary>
-        <div class="es-faq__answer">
+      <div class="es-faq__item">
+        <input type="checkbox" id="es-faq-toggle-1" />
+        <label for="es-faq-toggle-1" class="es-faq__single">
+          <div class="es-faq__question">
+            <div class="es-faq__txt">Jakie są przyczyny niedoboru magnezu?</div>
+            <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-1" />
+          </div>
+        </label>
+        <div class="es-faq__answer" id="es-faq__answer-1">
           Zdecydowana większość Polaków boryka się z&nbsp;niedostateczną podażą magnezu – nawet 61-90% mężczyzn oraz 52-70%
             kobiet może cierpieć na zbyt niski poziom tego składnika.<sup>4</sup> Dieta oparta na przetworzonych produktach, tłuszczach 
             i&nbsp;wapniu utrudnia wchłanianie magnezu przez organizm.<sup>4</sup> Dodatkowo stosowanie nawozów sztucznych w&nbsp;rolnictwie oraz 
@@ -2137,53 +2339,65 @@ display: none;
             ilości magnezu w&nbsp;diecie staje się coraz bardziej problematyczne<sup>4</sup>, 
           co może prowadzić do zaburzeń absorpcji magnezu oraz wzrostu liczby osób z&nbsp;niedoborami tego pierwiastka.
         </div>
-      </details>
+      </div>
 
-      <details class="es-faq__item">
-        <summary class="es-faq__question" data-esquestion-id="es-question-2">
-          Dlaczego niedobór magnezu daje objawy podobne do objawów stresu?
-          <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-2" />
-        </summary>
-        <div class="es-faq__answer">
+      <div class="es-faq__item">
+        <input type="checkbox" id="es-faq-toggle-2" />
+        <label for="es-faq-toggle-2" class="es-faq__single">
+          <div class="es-faq__question">
+            <div class="es-faq__txt">Dlaczego niedobór magnezu daje objawy podobne do objawów stresu?</div>
+            <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-2" />
+          </div>
+        </label>
+        <div class="es-faq__answer" id="es-faq__answer-2">
           Jedną z&nbsp;ról magnezu w&nbsp;organizmie człowieka jest hamowanie nadmiernej reakcji na stres, dlatego poziom tego pierwiastka 
           w&nbsp;naszym organizmie jest związany z&nbsp;poziomem odczuwanego stresu.<sup>1</sup>
         </div>
-      </details>
+      </div>
 
-      <details class="es-faq__item">
-        <summary class="es-faq__question" data-esquestion-id="es-question-3">
-          Jakie schorzenia są powiązane z&nbsp;brakiem magnezu? 
-          <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-3" />
-        </summary>
-        <div class="es-faq__answer">
+      <div class="es-faq__item">
+        <input type="checkbox" id="es-faq-toggle-3" />
+        <label for="es-faq-toggle-3" class="es-faq__single">
+          <div class="es-faq__question">
+            <div class="es-faq__txt">Jakie schorzenia są powiązane z&nbsp;brakiem magnezu?</div> 
+            <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-3" />
+          </div>
+        </label>
+        <div class="es-faq__answer" id="es-faq__answer-3">
           Większość osób kojarzy niedostatek magnezu głównie z&nbsp;dolegliwościami dotyczącymi układu mięśniowego, 
           takimi jak bolesne skurcze mięśni, drżenie powiek czy kącików ust. Ponadto niedobór magnezu może prowadzić 
           do takich problemów związanych z&nbsp;układem nerwowym jak słabsza reakcja na stres, nerwowość, drażliwość czy 
           irytacja.<sup>4,2</sup> Brak magnezu może również wiązać się z&nbsp;wieloma przewlekłymi schorzeniami, 
           takimi jak nadciśnienie tętnicze, cukrzyca typu 2 czy arytmia.<sup>4</sup>
         </div>
-      </details>
+      </div>
 
-      <details class="es-faq__item">
-        <summary class="es-faq__question" data-esquestion-id="es-question-4">
-          Czy młodzież powinna brać magnez? 
-          <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-4" />
-        </summary>
-        <div class="es-faq__answer">
+      <div class="es-faq__item">
+        <input type="checkbox" id="es-faq-toggle-4" />
+        <label for="es-faq-toggle-4" class="es-faq__single">
+          <div class="es-faq__question">
+            <div class="es-faq__txt">Czy młodzież powinna brać magnez?</div> 
+            <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-4" />
+          </div>
+        </label>
+        <div class="es-faq__answer" id="es-faq__answer-4">
           Oczywiście! w&nbsp;czasach intensywnego wysiłku intelektualnego, jak na przykład przed egzaminami maturalnymi czy sesjami na uczelniach, 
           stres może dotykać uczniów. Może to pogorszyć pamięć, koncentrację, spostrzegawczość, efektywność nauki oraz szybkość pracy umysłowej, 
           a także powodować uczucie pustki w&nbsp;głowie podczas egzaminu. Te objawy mogą wystąpić u&nbsp;każdego, nawet jeśli stosuje się różnorodną dietę. 
           Stres może być jednym z&nbsp;powodów niedoboru magnezu, dlatego warto korzystać z&nbsp;odpowiednich leków, 
           aby uzupełnić poziom tego pierwiastka w&nbsp;organizmie.
         </div>
-      </details>
+      </div>
 
-      <details class="es-faq__item">
-        <summary class="es-faq__question" data-esquestion-id="es-question-5">
-          Co dają ćwiczenia relaksacyjne?
-          <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-5" />
-        </summary>
-        <div class="es-faq__answer">
+      <div class="es-faq__item">
+        <input type="checkbox" id="es-faq-toggle-5" />
+        <label for="es-faq-toggle-5" class="es-faq__single">
+          <div class="es-faq__question">
+            <div class="es-faq__txt">Co dają ćwiczenia relaksacyjne?</div>
+            <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-5" />
+          </div>
+        </label>
+        <div class="es-faq__answer" id="es-faq__answer-5">
           Oto kilka propozycji ćwiczeń relaksacyjnych, które pomogą obniżyć napięcie i&nbsp;stres<sup>6,7</sup>
           <br /><br />
           Ćwiczenie "Góra" angażuje całe ciało, wspomaga koncentrację i&nbsp;równowagę. Aby je wykonać, stań prosto, złącz stopy, przenieś ciężar na pięty, opuść kość ogonową, a pośladki w&nbsp;dół. Podciągnij brzuch, pępek i&nbsp;mostek do góry, obróć ramiona na zewnątrz, opuść barki i&nbsp;wydłuż szyję. Wyprostuj łokcie, wydłuż palce, zwróć wnętrze dłoni ku biodrom, unieś czubek głowy i&nbsp;zaciśnij przody ud. Oddychaj swobodnie.
@@ -2194,7 +2408,7 @@ display: none;
           <br /><br />
           Ćwiczenie "Rozciąganie w&nbsp;skłonie do przodu" pozwala na łagodne wydłużenie kręgosłupa, otwiera tył nóg i&nbsp;pozwala na łagodne zgięcie w&nbsp;biodrach oraz uelastycznia obszar barków i&nbsp;pach.
         </div>
-      </details>
+      </div>
     </div>
 
     <div class="es-productsDesc">
@@ -2308,62 +2522,3 @@ display: none;
     </div>
   </div>
 </div>
-<script>
-//nav menu
-
-const navBtn = document.querySelector(
-  "#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navBtn"
-);
-const navMenu = document.querySelector(
-  "#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navCtn"
-);
-const navBarTop = document.querySelector(
-  "#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--top"
-);
-const navBarMiddle = document.querySelector(
-  "#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--middle"
-);
-const navBarBottom = document.querySelector(
-  "#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStroke--bottom"
-);
-
-const toggleMenu = () => {
-  navMenu.classList.toggle("es-hide");
-  if (!navMenu.classList.contains("es-hide")) {
-    navBarTop.style.transform = "translate(0, 0) rotate(45deg)";
-    navBarMiddle.style.opacity = "0";
-    navBarBottom.style.transform = "translate(0, 0) rotate(-45deg)";
-  } else {
-    navBarTop.style.transform = "translate(0, -8px)";
-    navBarMiddle.style.opacity = "1";
-    navBarBottom.style.transform = "translate(0, 8px)";
-  }
-};
-
-navBtn.addEventListener("click", () => toggleMenu());
-
-//show content
-
-const esShowContentButtons = document.querySelectorAll("[data-esshow-id]");
-
-esShowContentButtons.forEach((esShowContentButton) => {
-  esShowContentButton.addEventListener("click", () => {
-    const esshowId = esShowContentButton.dataset.esshowId;
-    const esModal = document.getElementById(esshowId);
-    esModal.classList.remove("es-hide");
-    esShowContentButton.classList.add("es-hide");
-  });
-});
-
-//faq
-
-const faqQuestions = document.querySelectorAll("[data-esquestion-id]");
-
-faqQuestions.forEach((faqQuestion) => {
-  faqQuestion.addEventListener("click", () => {
-    const esquestionId = faqQuestion.dataset.esquestionId;
-    const esfaqArrow = document.getElementById(esquestionId);
-    esfaqArrow.classList.toggle("es-faq__rotate");
-  });
-});
-</script>
