@@ -122,15 +122,16 @@ visibility: visible;
 height: auto;
 opacity: 1;
 }
-#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStrokeCtn {
-width: 50px;
+/*#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStrokeCtn {
+ width: 50px;
 height: 30px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-transition: all 0.3s ease;
-}
+transition: all 0.3s ease; 
+
+}*/
 #es-sanofi.es-sanofi #es-magne.es-magne #es-kv__navBtn {
 position: absolute;
 right: 2%;
@@ -140,16 +141,28 @@ width: 35px;
 background: transparent;
 border: none;
 cursor: pointer;
+content: url("./img/open-nav.png");
 }
-#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStrokeCtn--2 {
-position: absolute;
+#es-sanofi.es-sanofi #es-magne.es-magne #es-kv__navBtn--2 {
+  position: absolute;
+right: 2%;
+top: 5%;
+height: 30px;
+width: 35px;
+background: transparent;
+border: none;
+cursor: pointer;
+  content: url("./img/close-nav.png");
+}
+/*#es-sanofi.es-sanofi #es-magne.es-magne .es-kv__navStrokeCtn--2 {
+ position: absolute;
 display: block;
 width: 40px;
 height: 40px;
 top: 5px;
 right: 5px;
-cursor: pointer;
-}
+cursor: pointer; 
+}*/
 #es-sanofi.es-sanofi #es-magne.es-magne #es-kv-menu-toggle:checked ~ #es-kv__navBtn {
 display: none;
 }
@@ -1551,6 +1564,7 @@ font-size: 16px;
 line-height: 1.2;
 font-family: "es-Gilroy-semibold";
 color: #fff;
+margin: 0;
 }
 #es-sanofi.es-sanofi #es-magne.es-magne .es-faq__rotate {
 transform: rotate(-180deg);
@@ -1819,6 +1833,9 @@ display: block;
 width: 100%;
 }
 </style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="es-sanofi" id="es-sanofi">
   <div class="es-magne" id="es-magne">
     <div class="es-kv">
@@ -2327,77 +2344,77 @@ width: 100%;
         <input type="checkbox" id="es-faq-toggle-1" />
         <label for="es-faq-toggle-1" class="es-faq__single">
           <div class="es-faq__question">
-            <div class="es-faq__txt">Jakie są przyczyny niedoboru magnezu?</div>
+            <p class="es-faq__txt">Jakie są przyczyny niedoboru magnezu?</p>
             <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-1" />
           </div>
         </label>
-        <div class="es-faq__answer" id="es-faq__answer-1">
+        <p class="es-faq__answer" id="es-faq__answer-1">
           Zdecydowana większość Polaków boryka się z&nbsp;niedostateczną podażą magnezu – nawet 61-90% mężczyzn oraz 52-70%
             kobiet może cierpieć na zbyt niski poziom tego składnika.<sup>4</sup> Dieta oparta na przetworzonych produktach, tłuszczach 
             i&nbsp;wapniu utrudnia wchłanianie magnezu przez organizm.<sup>4</sup> Dodatkowo stosowanie nawozów sztucznych w&nbsp;rolnictwie oraz 
             kwaśne deszcze wpływają na ubożenie gleb w&nbsp;minerały, co obniża ich zawartość w&nbsp;żywności.<sup>9</sup> w&nbsp;rezultacie dostarczenie wystarczającej 
             ilości magnezu w&nbsp;diecie staje się coraz bardziej problematyczne<sup>4</sup>, 
           co może prowadzić do zaburzeń absorpcji magnezu oraz wzrostu liczby osób z&nbsp;niedoborami tego pierwiastka.
-        </div>
+        </p>
       </div>
 
       <div class="es-faq__item">
         <input type="checkbox" id="es-faq-toggle-2" />
         <label for="es-faq-toggle-2" class="es-faq__single">
           <div class="es-faq__question">
-            <div class="es-faq__txt">Dlaczego niedobór magnezu daje objawy podobne do objawów stresu?</div>
+            <p class="es-faq__txt">Dlaczego niedobór magnezu daje objawy podobne do objawów stresu?</p>
             <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-2" />
           </div>
         </label>
-        <div class="es-faq__answer" id="es-faq__answer-2">
+        <p class="es-faq__answer" id="es-faq__answer-2">
           Jedną z&nbsp;ról magnezu w&nbsp;organizmie człowieka jest hamowanie nadmiernej reakcji na stres, dlatego poziom tego pierwiastka 
           w&nbsp;naszym organizmie jest związany z&nbsp;poziomem odczuwanego stresu.<sup>1</sup>
-        </div>
+        </p>
       </div>
 
       <div class="es-faq__item">
         <input type="checkbox" id="es-faq-toggle-3" />
         <label for="es-faq-toggle-3" class="es-faq__single">
           <div class="es-faq__question">
-            <div class="es-faq__txt">Jakie schorzenia są powiązane z&nbsp;brakiem magnezu?</div> 
+            <p class="es-faq__txt">Jakie schorzenia są powiązane z&nbsp;brakiem magnezu?</p> 
             <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-3" />
           </div>
         </label>
-        <div class="es-faq__answer" id="es-faq__answer-3">
+        <p class="es-faq__answer" id="es-faq__answer-3">
           Większość osób kojarzy niedostatek magnezu głównie z&nbsp;dolegliwościami dotyczącymi układu mięśniowego, 
           takimi jak bolesne skurcze mięśni, drżenie powiek czy kącików ust. Ponadto niedobór magnezu może prowadzić 
           do takich problemów związanych z&nbsp;układem nerwowym jak słabsza reakcja na stres, nerwowość, drażliwość czy 
           irytacja.<sup>4,2</sup> Brak magnezu może również wiązać się z&nbsp;wieloma przewlekłymi schorzeniami, 
           takimi jak nadciśnienie tętnicze, cukrzyca typu 2 czy arytmia.<sup>4</sup>
-        </div>
+        </p>
       </div>
 
       <div class="es-faq__item">
         <input type="checkbox" id="es-faq-toggle-4" />
         <label for="es-faq-toggle-4" class="es-faq__single">
           <div class="es-faq__question">
-            <div class="es-faq__txt">Czy młodzież powinna brać magnez?</div> 
+            <p class="es-faq__txt">Czy młodzież powinna brać magnez?</p> 
             <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-4" />
           </div>
         </label>
-        <div class="es-faq__answer" id="es-faq__answer-4">
+        <p class="es-faq__answer" id="es-faq__answer-4">
           Oczywiście! w&nbsp;czasach intensywnego wysiłku intelektualnego, jak na przykład przed egzaminami maturalnymi czy sesjami na uczelniach, 
           stres może dotykać uczniów. Może to pogorszyć pamięć, koncentrację, spostrzegawczość, efektywność nauki oraz szybkość pracy umysłowej, 
           a także powodować uczucie pustki w&nbsp;głowie podczas egzaminu. Te objawy mogą wystąpić u&nbsp;każdego, nawet jeśli stosuje się różnorodną dietę. 
           Stres może być jednym z&nbsp;powodów niedoboru magnezu, dlatego warto korzystać z&nbsp;odpowiednich leków, 
           aby uzupełnić poziom tego pierwiastka w&nbsp;organizmie.
-        </div>
+        </p>
       </div>
 
       <div class="es-faq__item">
         <input type="checkbox" id="es-faq-toggle-5" />
         <label for="es-faq-toggle-5" class="es-faq__single">
           <div class="es-faq__question">
-            <div class="es-faq__txt">Co dają ćwiczenia relaksacyjne?</div>
+            <p class="es-faq__txt">Co dają ćwiczenia relaksacyjne?</p>
             <img src="https://estorelabs.github.io/RC---230319-SF-22-MagneB6-LP-OLMED/img/es-faq-arrow.webp" alt="" class="es-faq__arrow" id="es-question-5" />
           </div>
         </label>
-        <div class="es-faq__answer" id="es-faq__answer-5">
+        <p class="es-faq__answer" id="es-faq__answer-5">
           Oto kilka propozycji ćwiczeń relaksacyjnych, które pomogą obniżyć napięcie i&nbsp;stres<sup>6,7</sup>
           <br /><br />
           Ćwiczenie "Góra" angażuje całe ciało, wspomaga koncentrację i&nbsp;równowagę. Aby je wykonać, stań prosto, złącz stopy, przenieś ciężar na pięty, opuść kość ogonową, a pośladki w&nbsp;dół. Podciągnij brzuch, pępek i&nbsp;mostek do góry, obróć ramiona na zewnątrz, opuść barki i&nbsp;wydłuż szyję. Wyprostuj łokcie, wydłuż palce, zwróć wnętrze dłoni ku biodrom, unieś czubek głowy i&nbsp;zaciśnij przody ud. Oddychaj swobodnie.
@@ -2407,7 +2424,7 @@ width: 100%;
           Ćwiczenie "Siad skrzyżny" rozluźnia obszar krzyżowo-biodrowy i&nbsp;wycisza układ nerwowy. Aby je wykonać, usiądź i&nbsp;skrzyżuj nogi tak, aby stopy były pod kolanami, a kolana poniżej bioder. Połóż dłonie na udach, pochyl tułów do przodu, dążąc mostkiem do goleni, utrzymując głowę w&nbsp;linii z&nbsp;kręgosłupem. Pochylając się, wypuszczaj powietrze, prostując się, bierz wdech. Po kilku oddechach zmień splot nóg.
           <br /><br />
           Ćwiczenie "Rozciąganie w&nbsp;skłonie do przodu" pozwala na łagodne wydłużenie kręgosłupa, otwiera tył nóg i&nbsp;pozwala na łagodne zgięcie w&nbsp;biodrach oraz uelastycznia obszar barków i&nbsp;pach.
-        </div>
+        </p>
       </div>
     </div>
 
